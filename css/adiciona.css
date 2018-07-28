@@ -1,0 +1,88 @@
+
+.formulario,.titulo{
+	margin-left: 10px;
+}
+.formulario{
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	width:700px;
+}
+.formulario label{
+	font-weight: bold;
+}
+
+.formulario label,.formulario button{
+	margin-top: 15px;
+}
+.formulario button{
+	width: 100px;
+}
+#btn_add_categoria{
+	margin-top: 10px;
+	display: block;
+	width: 150px;
+}
+#btn_add_categoria:hover{
+	color: #398439;
+}
+.formulario textarea{
+	height: 150px;
+}
+.form-control,.formulario{
+	border: 1px solid #555;
+}
+.panel{
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.foto_item{
+	width: 23%;
+	float: left;
+	margin-right: 2%;
+	text-align: center;	
+	
+}
+.foto_item img{
+	height: 130px;
+	object-fit: cover;
+}
+.foto_item a{
+	margin: 10px;
+	margin-bottom: 10px;
+}
+#imagem_usuario{
+	position: fixed;
+	left: -9999px;
+	top: -9999px;
+	opacity: 0;
+}
+@media (max-width: 740px){
+	.formulario{
+		width: 95%;
+	}
+}
+@media (max-width: 650px){
+	.foto_item{
+		width: 47%;
+	}
+}
+@media (max-width: 500px){
+	.foto_item{
+		width: 100%;
+	}
+	.foto_item a{
+		display: block;
+		width: 120px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media(max-width: 340px){
+	.formulario{
+		margin-left: 0;
+	}
+}

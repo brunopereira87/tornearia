@@ -1,0 +1,96 @@
+h2{
+	margin-left: 0;
+}
+.titulo{
+	width: 100%;
+	height: 90px;
+	line-height: 90px;
+	font-size: 32px;
+	background-color: #D9DEE3;
+	margin: 0;
+	margin-bottom: 14px;
+
+}
+.painel{
+	background-color: rgb(226,233,230);
+	padding: 10px;
+	width: 100%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.servicos h3{
+	color: #18422B;
+	font-size: 26px;
+	font-weight: 600;
+	padding: 10px 10px 5px 10px;
+	margin-bottom: 0;
+}
+.titulo h2{
+	margin-top: 0;
+	line-height: 90px;
+	margin-left: 10px; 
+}
+.servicos{
+	width: 100%;
+	background-color: #fff;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.servico{
+	width: 100%;
+	display: inline-block;
+}
+
+.servico a{
+	padding: 10px 10px 10px 20px;
+	display: block;
+	background-color: rgb(226,233,230);
+	color: #333;
+	text-decoration: none;
+}
+.servico a:hover{
+	color: #333;
+	background: #ccc;
+	text-decoration: none;
+}
+.servico a i{
+	margin-right: 8px;
+}
+@media (min-width: 600px){
+	
+	footer{
+		clear: both;
+	}
+}
+
+@media (min-width: 640px){
+	
+	.servicos{
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		-o-column-count: 2;
+		column-count: 2;
+	}
+}
+
+@media (min-width: 1024px){
+	
+	.categorias{
+		width: 200px;
+		float: left;
+
+	}
+	
+	
+}
+@media (min-width: 1200px){
+	
+	.categorias{
+		width: 250px;
+	}
+	.titulo{
+		width: 100%;
+
+	}
+	
+}

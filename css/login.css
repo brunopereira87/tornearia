@@ -1,0 +1,46 @@
+.formulario{
+	margin: 50px auto 100px auto;
+	width: 500px;
+	height: auto;
+	background-color: #ccc;
+	padding: 20px;
+	border-radius: 4px;
+}
+.formulario input,.formulario button{
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+.formulario input[type=email]{
+	margin-top: 30px;
+	
+}
+.formulario input[type=password],.formulario button{
+	margin-top: 40px;
+}
+.formulario button {
+	background-color: #18422B;
+	display: block;
+	margin-bottom: 50px;
+}
+.titulo{
+	text-align: center;
+	font-size: 1.5em;
+}
+.cadastre{
+	text-decoration: none;
+	margin-left: 25%;
+	margin-right: auto;
+}
+
+@media (max-width: 515px){
+	.formulario{
+		width: 100%;
+	}
+	.cadastre{
+		margin-left: 5%;
+	}
+	.formulario button{
+		margin-bottom: 30px;
+	}
+}
