@@ -24,27 +24,26 @@ function listaCategoriasPaginacao($conexao,$offset,$limite){
 	$resultado = $conexao->query($sql);
 	
 	if($resultado->rowCount() > 0){
-		foreach($resultado->fetchAll() as $categoria){
-			array_push($categorias, $categoria);
-		}
+            foreach($resultado->fetchAll() as $categoria){
+                array_push($categorias, $categoria);
+            }
 	}
-	else{
-		echo "Sem categorias retornadas";
-	}
+        
 	return $categorias;
 }
 function listaCategoriasComServicos($conexao){
 	$categorias = array();
-	$sql = "Select * from categorias where com_servicos = 1 order by nome";
+	$sql = "SELECT c.* FROM categorias c WHERE (SELECT count(*) FROM servicos s "
+                . "WHERE s.id_categoria = c.id) > 0 ORDER BY c.nome";
 	$resultado = $conexao->query($sql);
 	
 	if($resultado->rowCount() > 0){
-		foreach($resultado->fetchAll() as $categoria){
-			array_push($categorias, $categoria);
-		}
+            foreach($resultado->fetchAll() as $categoria){
+                array_push($categorias, $categoria);
+            }
 	}
 	else{
-		echo "Sem categorias retornadas";
+            echo "Sem categorias retornadas";
 	}
 	return $categorias;
 }
@@ -88,3 +87,4 @@ function deletarCategoria($conexao,$id){
 	$sql->bindValue(":id",$id);
 	$sql->execute();
 }
+

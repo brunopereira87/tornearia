@@ -1,0 +1,420 @@
+*{
+	margin: 0; 
+	padding: 0;
+	font-size: 100%;
+	border: none;
+	outline: none;
+	font-weight: 300;
+	box-sizing: border-box;
+	font-family: 'Lato',sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+html, body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	color: #47525E;
+}
+/****CABEÇALHO*****/
+header,footer{
+	width: 100%;
+}
+header{
+	background: #18422B;
+	background: linear-gradient(to top, #111, #18422B,#111);
+	color: #fff;
+}
+h2{
+	color: #18422B;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	font-weight: bold;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	
+}
+img{
+	max-width: 100%;
+	max-height: 100%;
+}
+p{
+	margin: 2em 0;
+}
+strong{
+	font-weight: bold;
+}
+.btn-fechar{
+	font-size: 50px;
+	background-color: rgba(12,12,12, 0);
+	color: #fff;
+	float: right;
+	display: none;
+	z-index: 10;
+	position: fixed;
+	right: 3%;
+
+}
+.btn-padrao{
+	background: #18422B;
+	background: linear-gradient(to top, #111, #18422B,#111);
+	color: #fff;
+	font-weight: 600;
+}
+
+.clear{
+	clear: both;
+}
+.btn-menu{
+	background-color: rgba(0,0,0,0);
+	color: #fff;
+	font-size: 50px;
+	margin-right: 20px;
+}
+.icones{
+	color: #fff;
+	float: right;
+	display: block;
+	margin:0 2%;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	right: 0;
+	z-index: 10;
+	
+}
+.logo{
+	
+	width: 200px;
+	height: 70px;
+	line-height: 70px;
+	border: 3px solid #ccc;
+	border-radius: 200px;
+	font-size: 30px;
+	font-family: serif;
+	font-weight: bold;
+	float: left;
+	color: #FFF;
+	text-align: center;
+	margin: 3% 10px;	
+}
+.menu-navegacao{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(12,12,12, 0.7);
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.menu-navegacao ul{
+	clear: both;
+}
+.menu-navegacao li{
+	font-size: 1.5em;
+	text-align: center;
+	line-height: 1.5em;
+	padding: 5px 3%;
+}
+.menu-navegacao li:hover,
+.menu-navegacao li:active{
+		background-color: rgba(255,255,255,0.4);
+	}
+.menu-navegacao li a{
+	font-family: 'Tahoma';
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+.pesquisar{
+	width: 100%;
+	display: block;
+}
+.pesquisar input{
+	width: 60%;
+	display:inline-block;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.btn-pesquisar{
+	float: right;
+	margin-left: 10px;
+	margin-right: 5px;
+	background: #18422B;
+	background: linear-gradient(to bottom left, #18422B, #111);
+	color: #fff;
+	border-width: 2px;
+}
+/****FIM DO CABEÇALHO*****/
+
+/****RODAPÉ*****/
+footer{
+	background-color: #D9DEE3;
+	padding:1% 2% 4%;
+}
+footer h2{
+	font-size: 1.5em;
+	color:#47525E; 
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+footer p{
+	margin: 1% 0;
+}
+.contato{
+	margin-top: 2%;
+}
+.contato h2{
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.copyright{
+	display: block;
+	font-size: 0.8em;
+	margin-top: 2em;
+}
+.descricao{
+	font-family: "droid serif", serif;
+	text-transform: uppercase;
+	width: 40%;
+}
+.descricao h1{
+	font-size: 2.5em;
+	font-weight: bold;
+	margin-top: 0;
+}
+.descricao h1,.descricao h2{
+	display: inline-block;
+}
+.descricao h2{
+	text-transform: capitalize;
+}
+.social{
+	font-size: 2em;
+	color: #ccc;
+}
+.social i{
+	color: #33353A;
+}
+
+@media (min-width: 320px){
+	/***CABEÇALHO****/
+	header{
+		height: 180px;
+
+	}
+	.logo{
+		width: 200px;
+	}
+
+	.logo,.icones,.menu-navegacao ul{
+		margin-top: 50px;
+	}
+	.pesquisar{
+		display: inline-block;
+		padding: 0;
+	}
+
+	/***RODAPÉ*****/
+	footer h2{
+		font-size: 1.2em;
+	}
+	footer p{
+		font-size: 0.9em;
+	}
+	.contato p{
+		margin-top: 3%;
+	}
+	.descricao h1{
+		font-size: 2em;
+	}
+	.contato,.descricao,.social{
+		width: 100%;
+	}
+	.social{
+		margin-top: 3%;
+	}
+	.social i{
+
+		margin-right: 2%;
+	}
+
+}
+@media (min-width: 420px){
+	.pesquisar input{
+		width: 68%;
+	}
+}
+@media (min-width: 505px){
+	.pesquisar input{
+		width: 73%;
+	}
+}
+@media (min-width: 640px){
+	/***CABEÇALHO****/
+	header{
+		height: auto;
+	}
+	.logo{
+		background-size:  160px 80px;
+		margin:20px 0;
+	}
+	.btn-fechar, .btn-menu{
+		display: none;
+	}
+	.topo{
+		display: block;
+	}
+	.topo-direita{
+		float: right;
+		line-height: 40px;
+		margin-top: 50px;
+	}
+	.topo-direita input{
+		width: 200px;
+		float: left;
+
+	}
+	.topo-direita .icones{
+		display: none;
+	}
+	
+	.menu-navegacao-out{
+		background: #18422B;
+		background: linear-gradient(to top, #18422B, #18422B,#999);
+
+	}
+	.menu-navegacao{
+		display: block;
+		position: static;
+		width: 100%;
+		height: 50px;
+		background-color: rgba(0,0,0,0);
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	.menu-navegacao ul{
+		display: inline-block;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		height: 40px;
+		
+	}
+	.menu-navegacao ul li{
+		float: left;
+		display: block;
+		font-size: 15px;
+		font-weight: bold;
+		text-align: left;
+		height: 40px;
+		line-height: 30px;
+		border-radius: 4px;
+		margin-bottom: 0;
+	}
+	
+	.menu-navegacao li:last-child{
+		margin-right: 0;
+	}
+	.menu-esquerdo{
+		width: 380px;
+	}
+	.menu-direito{
+		float: right;
+		text-align: right;
+		
+	}
+	.logado{
+		width: 405px;
+	}
+	.deslogado{
+		width: 110px;
+	}
+	.menu-direito li{
+		margin-right: 30px;
+	}
+	.icones{
+		display: none;
+	}
+	.pesquisar{
+		width: 100%;
+
+	}
+	.btn-pesquisar{
+		float: left;
+		margin-left: 10px;
+	}
+	/****RODAPÉ***/
+	footer h2{
+		font-size: 1.8em;
+	}
+	.contato,.descricao{
+		width: 45%;
+	}
+	.contato{
+		float: right;
+		margin-top: 0;
+		
+	}
+	.copyright{
+		clear: both;
+		margin-right: 5%;
+		margin-top: 11em;
+		
+	}
+	.descricao{
+		float: left;
+	}
+	.descricao h1{
+		font-size: 2.5em;
+	}
+}
+@media (min-width: 960px){
+	.conteudo{
+		width: 910px;
+		margin: auto;
+		max-height: 100%;
+	}
+	.logo{
+		margin-left: 0;
+	}
+	
+	/*****RODAPÉ******/
+	
+	.descricao{
+		margin-left: 0;
+	}
+	.contato{
+		padding-left: 10%;
+	}
+	.copyright{
+		margin-top: 13em;
+	}
+
+}
+@media (min-width: 1200px){
+	.conteudo{
+		width: 1100px;
+		margin: auto;
+
+	}
+	
+	
+	/*****RODAPÉ******/
+	.contato{
+		padding-left: 15%;
+	}
+	
+}
+@media (min-width: 1360px){
+	.copyright{
+		margin-right: 7%;
+		margin-top: 15em;
+	}
+}

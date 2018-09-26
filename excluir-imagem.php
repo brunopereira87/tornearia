@@ -19,11 +19,11 @@ else{
 }
 
 if(isset($id_servico) && $id_servico !==0 ){
-	header("Location: altera-servico.php?id_servico=".$id_servico);
+	header("Location: public/altera-servico.php?id_servico=".$id_servico);
 	exit();
 }
 else{
-	header("Location: painel-controle.php");
+	header("Location: public/painel-controle.php");
 	exit();	
 }
 

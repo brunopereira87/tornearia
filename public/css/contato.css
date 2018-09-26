@@ -1,0 +1,109 @@
+.titulo{
+	width: 100%;
+	height: 90px;
+	line-height: 90px;
+	font-size: 32px;
+	background-color: #D9DEE3;
+	margin: 0;
+	margin-bottom: 14px;
+
+}
+
+.titulo h2{
+	margin-top: 0;
+	line-height: 90px;
+}
+footer{
+	width: 100%;
+	margin-right: 0;
+}
+.titulo h2,
+.enunciado,
+.formulario-contato{
+	margin-left: 10px; 
+}
+.enunciado,
+label,
+.lbl-contato{
+	font-size: 1.1em;
+}
+.formulario-contato{
+	padding: 10px;
+	background-color: rgba(10,10,10,.15);
+	margin-bottom: 40px;
+	border-radius: 2px;
+}
+.uf{
+	padding-left: 0;
+	width: 12%;
+}
+.cidade{
+	padding-right: 1%;
+}
+.mensagem{
+	height: 200px;
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+}
+.mensagem:active,
+.mensagem:focus{
+	border:1px solid #66afe9;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.btn-enviar{
+	background-color: #18422B;
+	color: #fff;
+	width: 100px;
+	font-weight: bold;
+	margin-top: 15px;
+	border-width: 2px;
+
+}
+.btn-enviar:hover,
+.btn-enviar:active{
+	background-color: #ddd;
+	color: #18422B;
+	border: 2px solid #18422B;
+	box-sizing: border-box;
+}
+.col-contato{
+	background-color: #eee;
+	padding: 25px 10px;
+	border-radius: 2px;
+}
+.col-contato hr{
+	border-color: #333;
+}
+.col-contato a{
+	color: #0B6121;
+	font-weight: normal; 
+	font-weight: 600;
+}
+
+@media (min-width: 320px){
+	.form-control{
+		width: 90%;
+	}
+	.formulario-contato{
+		margin-left: 0;
+	}
+	
+
+}
+@media (min-width: 768px){
+	.form-control{
+		width: 100%;
+	}
+
+}
+
+@media (max-width: 768px){
+	.row{
+		margin-right: 0;
+	}
+	.col-contato{
+		margin-top: 20px;
+	}
+}

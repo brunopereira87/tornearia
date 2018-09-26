@@ -1,0 +1,84 @@
+<?php 
+    require_once '../conecta.php';
+    require_once '../banco-categoria.php';
+    require_once '../banco-servicos.php';
+    require_once '../banco-usuario.php';
+    $title = "Cadastro de Servicos";
+    $css = '<link rel="stylesheet" type="text/css" href="css/adiciona.css">';
+    require_once 'cabecalho.php';
+    if(!verificaLogin()){
+        header("Location: index.php");
+        exit;
+    }
+    $categorias = listaCategorias($conexao);
+    
+    if(isset($_FILES['arquivo'])){
+        $extensao = strtolower(substr($_FILES['arquivo']['name'], -4));//pega a extensão
+        $novo_nome = md5(time()).$extensao;
+        $diretorio = "upload/";
+        $imagem = $diretorio.$novo_nome;
+        move_uploaded_file($_FILES['arquivo']['tmp_name'], $imagem);
+
+
+    }else{
+        $imagem = "img/photo.png";
+    }
+    if(isset($_POST['nome']) && !empty($_POST['nome'])){
+        $nome = addslashes( $_POST['nome']);
+        $descricao = addslashes($_POST['descricao']);
+        $id_categoria = addslashes($_POST['categoria']);
+
+        if(isset($_FILES['fotos'])){
+                $fotos = $_FILES['fotos'];
+        }
+        else{
+                $fotos = array();
+        }
+
+        inserirServico($conexao,$nome,$descricao,$id_categoria,$fotos);
+        $_SESSION['success'] = "Serviço cadastrado com sucesso...";
+    }
+?>
+<div class="conteudo">
+     <h2 class="titulo">Adicionar Servico</h2>
+     <?php 
+        require 'alerts.php';
+     ?>
+     <div class="row formulario">
+        <div class="col-sm-12">
+            <?php 
+                if(!empty($msg)) echo("<p>$msg</p>");
+            ?>
+            <form  method="post" enctype="multipart/form-data" >
+                <fieldset>
+                    <label for="nome">Nome do Serviço</label>
+                    <input type="text" name="nome" class="form-control"  required>
+
+                    <label>Categoria</label>
+                    <select class="form-control" name="categoria" id="select_categoria">
+                        <?php
+                            for($i=0; $i < count($categorias);$i++) :?>
+                            <option value="<?=$categorias[$i]['id']?>"><?=$categorias[$i]['nome']?></option>
+                        <?php 
+                            endfor;
+                        ?>
+
+                    </select>
+                    <a class="btn btn-padrao" id="btn_add_categoria">Nova categoria</a>
+                    <label>Descrição do Serviço</label>
+                    <textarea required name="descricao" class="form-control" ></textarea>
+                    <div class="form-group">
+                        <label for="fotos">Fotos</label><br>
+                        <input type="file" name="fotos[]" multiple>
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-padrao">Enviar</button>
+                </fieldset>	
+            </form>
+        </div>
+     </div>
+	
+ </div>
+
+
+<?php require_once 'rodape.php';

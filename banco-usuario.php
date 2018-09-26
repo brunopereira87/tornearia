@@ -42,22 +42,22 @@ function getNivel($id,$pdo){
 	}
 }
 function verificaLogin(){
-	if(isset($_SESSION['logado']) && !empty($_SESSION['logado'])){
-		return true;
-	}
+    if(isset($_SESSION['logado']) && !empty($_SESSION['logado'])){
+        return true;
+    }
 
-	return false;
+    return false;
 }
 function inserirUsuario($pdo,$nome,$username,$email,$senha,$imagem){
-	$sql = "INSERT INTO usuarios (nivel_usuario_id,nome,username, email, senha,imagem) VALUES (2,:nome,:username,:email,:senha,:imagem)";
-	$sql = $pdo->prepare($sql);
-	$sql->bindValue(":nome",$nome);
-	$sql->bindValue(":username",$username);
-	$sql->bindValue(":email",$email);
-	$sql->bindValue(":senha",$senha);
-	$sql->bindValue(":imagem",$imagem);
+    $sql = "INSERT INTO usuarios (nivel_usuario_id,nome,username, email, senha,imagem) VALUES (2,:nome,:username,:email,:senha,:imagem)";
+    $sql = $pdo->prepare($sql);
+    $sql->bindValue(":nome",$nome);
+    $sql->bindValue(":username",$username);
+    $sql->bindValue(":email",$email);
+    $sql->bindValue(":senha",$senha);
+    $sql->bindValue(":imagem",$imagem);
 
-	$sql->execute();
+    $sql->execute();
 }
 function alterarUsuario($pdo,$nome,$username,$email,$senha,$imagem,$id){
 	$sql = "UPDATE usuarios SET nome = :nome,username = :username , email = :email, senha = :senha ,imagem = :imagem WHERE id = :id ";
@@ -96,9 +96,9 @@ function buscaUsuario($pdo,$id){
 		return $sql->fetch();
 	}
 	else{
-		$_SESSION['erro'] = "Você não tem permissão para acessar essa página!";
-		header("Location: login.php");
-		exit;
+            $_SESSION['erro'] = "Você não tem permissão para acessar essa página!";
+            header("Location: login.php");
+            exit;
 	}
 }
 function deletarUsuario($pdo,$id){
@@ -106,4 +106,15 @@ function deletarUsuario($pdo,$id){
 	$sql = $pdo->prepare($sql);
 	$sql->bindValue(":id",$id);
 	$sql->execute();
+}
+
+function autorizaAdmin($pdo){
+    if(!verificaLogin()){
+        header('Location:index.php');
+        exit;
+    }
+    if(getNivel($_SESSION['logado'], $pdo) != 1){
+        header('Location:painel-controle.php');
+        exit;
+    }
 }

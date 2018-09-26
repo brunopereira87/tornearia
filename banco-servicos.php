@@ -37,7 +37,7 @@ function listaServicosCategoria($conexao,$id){
 	$sql->execute();
 	
 	if($sql->rowCount() > 0){
-		$servicos = $sql->fetchAll();
+            $servicos = $sql->fetchAll();
 	}
 	return $servicos;
 }
@@ -100,9 +100,9 @@ function atualizarServico($conexao,$nome,$descricao,$id_categoria,$fotos,$id){
 	atualizaComServicos($conexao,$id_categoria);
 }
 function deletarServico($conexao,$id){
-
+        
 	deletarImagens($conexao,$id);	
-
+        
 	$sql = "DELETE FROM servicos WHERE id = :id";
 	$sql = $conexao->prepare($sql);
 	$sql->bindValue(":id",$id);

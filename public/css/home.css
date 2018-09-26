@@ -1,0 +1,196 @@
+
+h2{
+	color: #18422B;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	font-weight: bold;
+	margin-bottom: 2%;
+}
+h3{
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 1.1em;
+}
+.conteudo-home p{
+	margin-top: 8%;
+}
+.empresa,.servicos{
+	padding: 3% 2%;
+}
+.empresa{
+	background-color: #D9DEE3;
+}
+.img_pecas{
+	display: none;
+	width: 300px;
+}
+.servico{
+	list-style: none;
+}
+.servico a{
+	padding: 10px 10px 10px 20px;
+	display: block;
+	background-color: rgb(226,233,230);
+	color: #333;
+	text-decoration: none;
+}
+.servico a:hover{
+	color: #333;
+	background: #ccc;
+	text-decoration: none;
+}
+.servico a i{
+	margin-right: 8px;
+}
+.servicos ul{
+	margin:1% 0;
+}
+.servicos li{
+	margin-top: 3%;
+}
+#slider{
+	width:300px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+.slide-imagem{
+	width: 6000px;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#slider .slide{
+	float: left;
+	width: 300px;
+	height: 250px;
+
+}
+
+.clear{
+	clear: both;
+}
+.mais{
+	font-size: 0.8em;
+	color: #18422B;
+	width: 100%;
+	display: block;
+	text-align: right;
+	font-weight: bold;
+	margin-top: 2%;
+	padding-right: 4%;
+}
+@media (min-width: 320px){
+	#slider,.img_pecas{
+		margin-top: 4%;
+	}
+	.servicos h3,.servicos ul{
+		margin-top: 4%;
+	}
+
+}
+@media (min-width: 768px){
+	h2,h3{
+		font-size: 1.2em;
+	}
+	.conteudo-home{
+		width: 100%;
+		padding-left: 3%;
+		
+	}
+	.conteudo-home h2{
+		margin-top: 2%;
+	}
+	#slider{
+		float: left;
+		margin-left: 3%;
+	}
+	.img_pecas{ 
+		float: right;
+		display: block;
+	}
+	.img_pecas img{
+		margin-right: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+
+	}
+	#slider{
+		margin-top: 0;
+	}
+	.servicos h2{
+		margin-top: 4%;
+	}
+	.servicos h3{
+		margin-top: 3%;
+	}
+	.servicos ul{
+		margin:1% 0;
+	}
+	.servicos li{
+		font-size: 1.1em;
+	}
+	.servicos .conteudo-home{
+		width: 50%;
+		float: left;
+		margin-left: 20px;
+	}
+	.servicos .conteudo-home h2{
+		margin-top: 0;
+	}
+}
+@media (min-width: 960px){
+	h2{
+		font-size: 1.4em;
+	}
+	.conteudo-home p{
+		margin-top: 5%;
+		
+	}.servicos{
+		
+	}
+}
+@media (min-width: 1000px){
+	.conteudo-home{
+		width: 58%;
+		padding-left: 0;
+	}
+	.conteudo-home p{
+		margin-top: 4%;
+	}
+	.conteudo-home,.slide-imagem{
+		margin-left: 0;
+	}
+	.empresa .conteudo-home{
+		float: left;
+		
+	}
+	.img_pecas{
+		display: block;
+		width: 25%;
+		margin-top: 5%;
+		margin-right: 8%;
+	}
+	#slider{
+		float: left;
+		margin-top: 0;
+	}
+	.servicos .conteudo-home{
+		float: right;
+		clear: none;
+
+	}
+	footer{
+		clear: both;
+	}
+}
+@media (min-width: 1200px){
+	.img_pecas{
+		display: block;
+		width: 25%;
+		margin-top: 0;
+		margin-right: 8%;
+	}
+}
